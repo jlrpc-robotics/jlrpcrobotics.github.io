@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fdfdfd;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #333;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.post-preview {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9em;
+}
