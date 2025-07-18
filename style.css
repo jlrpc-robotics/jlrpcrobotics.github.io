@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 
