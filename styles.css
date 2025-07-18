@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+.header {
+  display: flex;           /* makes children side-by-side */
+  align-items: left;     /* vertically centers image and text */
+  gap: 15px;               /* space between icon and text */
+  width: 1000px;
+  padding-top: 10px;
+}
+
+.header-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.header-text h1 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.header-text h2 {
+  font-size: 16px;
+}
+
+.divider {
+  border: none;
+  height: 1px;                /* thickness of the line */
+  background-color: rgb(255, 255, 255);    /* line color */
+  width: 100%;                /* full width inside container */
+  margin: 0;                  /* remove default hr margin */
+  padding: 0 425px;
+}
+
+/* Tree Navigation */
+nav {
+  margin-top: 25px;
+  width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  border-right: 1px solid white;
+}
+
+.tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+.tree ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 25px;
+  display: none;
+}
+
+.tree .open > ul {
+  display: block;
+}
+
+.tree li {
+  position: relative;
+  padding-left: 2em; /* Room for ├── or └── */
+  line-height: 1.4em;
+  font-family: 'Montserrat' sans-serif;
+}
+
+.tree li::before {
+  content: "├──";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #888;
+}
+
+.tree li:last-child::before {
+  content: "└──";
+}
+
+/* Remove vertical line from last child */
+.tree li:last-child::after {
+  display: none;
+}
+
+/* Draw vertical connector │ aligned with ├ */
+.tree li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.3em;    /* precise alignment under ├ */
+  top: 1.2em;      /* starts just below the text line */
+  bottom: 0;
+  width: 1px;
+  background-color: #888;
+}
+
+/* Folder toggles */
+.toggle {
+  cursor: pointer;
+  user-select: none;
+  color: white;
+}
+
+/* Links */
+nav a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2px 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav t {
+  font-size: 14px;
+}
+
+main {
+  margin-left: -1200px;
+  padding: 95px 40px;
+  width: 100%;
+}
+
+.blog-post {
+  display: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blog-post.active {
+  display: block;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

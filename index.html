@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Blog</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>jlrpc-robotics</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Jlrpc Robotics</h1>
-    <p>My blog.</p>
+  <header class="header">
+    <img src="images/icon.png" alt="Icon" class="header-icon" />
+    <div class="header-text">
+      <h1>julian</h1>
+      <div class="divider"></div>
+      <h2>jlrpc-robotics</h2>
+    </div>
   </header>
 
+  <nav>
+    <t>navigation</t>
+    <ul class="tree">
+      <li class="branch open">
+        <span class="toggle">me</span>
+        <ul>
+          <li><a href="#" data-post="post1">about_me</a></li>
+          <li class="branch open">
+            <span class="toggle">knowledge_base</span>
+            <ul>
+              <li><a href="#" data-post="post2">languages</a></li>
+              <li><a href="#" data-post="post3">softwares</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="branch open">
+        <span class="toggle">projects</span>
+        <ul>
+          <li><a href="#" data-post="post4">humanoid_robot</a></li>
+          <li><a href="#" data-post="post4">thesis</a></li>
+          <li><a href="#" data-post="post4">micro_mouse</a></li>
+          <li><a href="#" data-post="post4">face_robot</a></li>
+          <li><a href="#" data-post="post4">warman_challenge</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
   <main>
-    <article class="post-preview">
-      <h2><a href="post1.html">My First Blog Post</a></h2>
-      <p>This is a short excerpt from my first post. Click to read more...</p>
-    </article>
+    <section id="post1" class="blog-post active" open>
+      <h2>about me</h2>
+      <p>lorum ipsum.</p>
+    </section>
+    <section id="post2" class="blog-post">
+      <h2>AI Blog Generator</h2>
+      <p>A tool to generate blog content automatically using AI.</p>
+    </section>
+    <section id="post3" class="blog-post">
+      <h2>Legacy Projects</h2>
+      <p>Old but gold — previous work that still inspires.</p>
+    </section>
+    <section id="post4" class="blog-post">
+      <h2>Book Summary</h2>
+      <p>Summary of the book "Deep Work" and key insights.</p>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 My Blog</p>
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
