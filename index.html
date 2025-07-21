@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>jlrpc-robotics</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <header class="header">
@@ -11,10 +12,9 @@
     <div class="header-text">
       <h1>julian</h1>
       <div class="divider"></div>
-      <h2>jlrpc-robotics</h2>
+      <h2>jlrpc-robotics | <a href="https://www.youtube.com/@jlrpc-robotics">youtube</a> | <a href="https://github.com/jlrpc-robotics">github</a></h2>
     </div>
   </header>
-
   <nav>
     <t>navigation</t>
     <ul class="tree">
@@ -35,10 +35,10 @@
         <span class="toggle">projects</span>
         <ul>
           <li><a href="#" data-post="post4">humanoid_robot</a></li>
-          <li><a href="#" data-post="post4">thesis</a></li>
-          <li><a href="#" data-post="post4">micro_mouse</a></li>
-          <li><a href="#" data-post="post4">face_robot</a></li>
-          <li><a href="#" data-post="post4">warman_challenge</a></li>
+          <li><a href="#" data-post="post5">thesis</a></li>
+          <li><a href="#" data-post="post6">micro_mouse</a></li>
+          <li><a href="#" data-post="post7">face_robot</a></li>
+          <li><a href="#" data-post="post8">warman_challenge</a></li>
         </ul>
       </li>
     </ul>
@@ -47,19 +47,70 @@
   <main>
     <section id="post1" class="blog-post active" open>
       <h2>about me</h2>
-      <p>lorum ipsum.</p>
+      <p>Hi, I'm Julian.</p>
+      <p>This site serves as documentation for all of my different projects, as well as a more detailed resume. </p>
+      <p>You can use the navigation sidebar to visit my different posts and documentation. </p>
     </section>
     <section id="post2" class="blog-post">
-      <h2>AI Blog Generator</h2>
-      <p>A tool to generate blog content automatically using AI.</p>
+      <h2>languages</h2>
+      <p>Here are the different programming languages i've learnt and used, ranked from greatest understanding to weakest understanding.</p>
+      <list> 
+        <li>Python</li>
+        <li>C#</li>
+        <li>C++</li>
+        <li>HTML and CSS</li>
+      </list>
     </section>
     <section id="post3" class="blog-post">
-      <h2>Legacy Projects</h2>
-      <p>Old but gold — previous work that still inspires.</p>
+      <h2>softwares</h2>
+      <p>Here are some of the softwares I've had experience using:</p>
+      <list> 
+        <li>Autodesk Inventor</li>
+        <li>ROS2, Gazebo and Rviz</li>
+        <li>Arduino</li>
+        <li>STM32Cube</li>
+      </list>
     </section>
     <section id="post4" class="blog-post">
-      <h2>Book Summary</h2>
-      <p>Summary of the book "Deep Work" and key insights.</p>
+      <h2>humanoid_robot</h2>
+      <p>WIP</p>
+    </section>
+    <section id="post5" class="blog-post">
+      <h2>thesis</h2>
+      <p><i>2025</i></p>
+      <p>WIP</p>
+    </section>
+    <section id="post6" class="blog-post">
+      <h2>micro_mouse</h2>
+      <p><i>2024</i></p>
+      <p>WIP</p>
+    </section>
+    <section id="post7" class="blog-post">
+      <h2>face_robot</h2>
+      <div style="display: flex;">
+        <div>
+          <p><i>2024</i></p>
+          <p>In my second year of uni, I worked on a small robotics project for one of my classes. The goal of this project was to develop a life-sized face robot that could realistically display a few emotions through preprogrammed animations.</p>
+          <p>As such, we were required to have eyes that moved at least from side-to-side, a mouth that could open and close as well as eyebrows. These elements allowed the robot to display the required emotional animations for the rubric.</p>
+          <p>Additionally, we were allowed to develop an X-factor, an custom element that would aid the realism of the face robot. Notably for this, we were allowed to use derivative designs. 
+            For this, I chose to employ <a href="https://willcogley.notion.site/?p=fee129fa32a443749f88524f53702f5a&pm=c">Will Cogley's EyeMech Design.</a> Unlike the bare-minimum required design, this mechanism allowd for up-and-down movement as well,
+            which meant that the eyes could move in any direction, just like a real human.
+            For the Jaw, I used a single MG90s servo motor inside the bearing-suspended jaw to rotate it.
+            Two more MG90s servo motors controlled the popsicle-stick eyebrows. Together, these elements gave a suprisingly realistic face movements.</p>
+            <p>To control the robot, there were two modes. The first mode allowed the user to control the robot through a set of buttons that would display specific facial movements (happy/sad/surprised). The second mode cycled through the different emotions until 
+            its internal microphone heard a volume above a certain threshold, where it would display a suprised emotion for a few seconds before going back to cycling through the different emotions.</p>
+            <p>The Mega 2560 R3 microcontroller was programmed in low-level Arduino, and no libraries were allowed for submission.</p>
+        </div>
+        <div>
+          <img src="images/face_robot.png" alt="face_robot"/>
+          <p><i>Artistic Depiction of the Face Robot</i></p>
+        </div>
+      </div>
+    </section>
+    <section id="post8" class="blog-post">
+      <h2>warman_challenge</h2>
+      <p><i>2023</i></p>
+      <p>WIP</p>
     </section>
   </main>
 
