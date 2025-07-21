@@ -170,9 +170,12 @@ a:visited {
   list-style-type: circle;
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/montserrat.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
