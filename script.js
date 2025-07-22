@@ -45,26 +45,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-//Animating Icon - Top Left
-
-const gif = document.getElementById('gif');
-const stillImage = 'images/icon.png';
-const animatedGif = 'images/coggif.gif';
-let timeoutId = null;
-let isAnimating = false;
-
-document.addEventListener('mousemove', () => {
-  // If not already animating, switch to the animated GIF
-  if (!isAnimating) {
-    gif.src = animatedGif;
-    isAnimating = true;
-  }
-
-  // Reset the timer to switch back to still
-  clearTimeout(timeoutId);
-  timeoutId = setTimeout(() => {
-    gif.src = stillImage;
-    isAnimating = false;
-  }, 250); // Switch back 100ms after no movement
-});
