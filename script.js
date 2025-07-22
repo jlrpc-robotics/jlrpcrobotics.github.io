@@ -25,10 +25,28 @@ document.addEventListener("DOMContentLoaded", () => {
       if (target) {
         target.classList.add("active");
         window.scrollTo({ top: 0, behavior: "smooth" });
+
+        if (id === "post9" && typeof startSnakeGame === "function" && !window.snakeStarted) {
+          window.snakeStarted = true;
+          startSnakeGame();
+        }
       }
     });
   });
+
+  //Snake Restart Button
+  const restartBtn = document.getElementById("restart-snake");
+  if (restartBtn) {
+    restartBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (typeof startSnakeGame === "function") {
+        startSnakeGame();
+      }
+    });
+  }
 });
+
+//Animating Icon - Top Left
 
 const gif = document.getElementById('gif');
 const stillImage = 'images/icon.png';
